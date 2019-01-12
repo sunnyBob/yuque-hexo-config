@@ -1,0 +1,39 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.8.0"
+  },
+  "scripts": {
+    "deploy": "npm run remove && npm run sync && hexo clean && hexo d -g",
+    "sync": "DEBUG=yuque-hexo.* yuque-hexo sync",
+    "clean:yuque": "DEBUG=yuque-hexo.* yuque-hexo clean",
+    "reset": "npm run clean:yuque && npm run sync",
+    "remove": "rm -rf source/_posts/"
+  },
+  "yuqueConfig": {
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "xxx",
+    "repo": "xxx",
+    "mdNameFormat": "title",
+    "postPath": "source/_posts/"
+  },
+  "dependencies": {
+    "hexo": "^3.7.0",
+    "hexo-deployer-git": "^1.0.0",
+    "hexo-generator-archive": "^0.1.5",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-generator-index": "^0.2.1",
+    "hexo-generator-json-content": "^3.0.1",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-renderer-ejs": "^0.3.1",
+    "hexo-renderer-marked": "^0.3.2",
+    "hexo-renderer-stylus": "^0.3.3",
+    "hexo-server": "^0.3.1",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "yuque-hexo": "^1.3.1"
+  }
+}
