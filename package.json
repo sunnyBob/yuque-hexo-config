@@ -6,7 +6,7 @@
     "version": "3.8.0"
   },
   "scripts": {
-    "deploy": "npm run remove && npm run sync && hexo clean && hexo d -g",
+    "deploy": "npm run remove && npm run reset && hexo clean && hexo d -g",
     "sync": "DEBUG=yuque-hexo.* yuque-hexo sync",
     "clean:yuque": "DEBUG=yuque-hexo.* yuque-hexo clean",
     "reset": "npm run clean:yuque && npm run sync",
